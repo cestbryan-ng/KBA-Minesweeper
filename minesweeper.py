@@ -217,7 +217,7 @@ class MinesweeperAI:
         update = True
         while update:
             update = False
-            
+
             for sentence in self.knowledge:
                 for mine in sentence.known_mines().copy():
                     self.mark_mine(mine)
@@ -225,7 +225,7 @@ class MinesweeperAI:
                 for mine in sentence.known_safes().copy():
                     self.mark_safe(mine)
                     update = True
-            
+
             new_knowledges = list()
             for sentence in self.knowledge:
                 for other_sentence in self.knowledge:
